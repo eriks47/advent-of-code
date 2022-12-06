@@ -17,7 +17,7 @@ int getFirstMarkerEnd(std::ifstream &inputStream)
     inputStream >> c;
     for (i = 0; !inputStream.eof(); inputStream >> c, ++i)
     {
-        if (lastRead.size() == 14)
+        if (lastRead.size() == LENGTH_OF_MARKER)
             break;
 
         if (lastRead.find(c) != lastRead.end())
